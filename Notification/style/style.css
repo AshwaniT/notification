@@ -1,0 +1,201 @@
+#userNotifications {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+    #userNotifications.hidden {
+        display: none;
+    }
+
+    #userNotifications .notifMenuItem {
+        background: #666;
+        padding: 8px 4px;
+        position: relative;
+        z-index: 21;
+    }
+
+    #userNotifications.closed .notifMenuItem {
+        background: transparent;
+    }
+
+    #userNotifications .indicator {
+        background: #ccc;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        display: block;
+        height: 10px;
+        width: 10px;
+    }
+
+    #userNotifications.connected .notifMenuItem {
+        cursor: pointer;
+    }
+
+    #userNotifications.connected .indicator {
+        background: #0c0;
+    }
+
+    #userNotifications .count {
+        background: #c00;
+        border-radius: 6px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.25);
+        color: #fff;
+        font-size: 10px;
+        font-weight: bold;
+        height: 12px;
+        left: 2px;
+        line-height: 12px;
+        min-width: 6px;
+        padding: 0 3px;
+        position: absolute;
+        text-align: center;
+        top: 2px;
+    }
+
+#noNotifications {
+    padding: 8px;
+    text-align: center;
+}
+
+#notifPanel {
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 10px;
+    line-height: 12px;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%;
+    width: 186px;
+    z-index: 19;
+}
+
+    #notifPanel a {
+        color: #0272ff;
+    }
+
+    #notifPanel ul {
+        list-style: none;
+        margin: 0;
+        padding: 8px 0;
+    }
+
+    #notifPanel li {
+        border-top: 1px solid #ccc;
+        padding: 4px 4px 16px;
+    }
+
+        #notifPanel li:first-child {
+            border-top: 0;
+        }
+
+    #notifPanel .date {
+        color: #999;
+    }
+
+    #notifPanel .new .date {
+        color: #0272ff;
+    }
+
+    #notifPanel .loadMore {
+        display: block;
+        font-size: 12px;
+        margin: 8px auto;
+        text-align: center;
+    }
+
+        #notifPanel .loadMore.hidden {
+            display: none;
+        }
+
+        /*new*/
+
+        #userNotifications {
+       display: inline-block;
+       position: relative;
+       vertical-align: top;
+       &.hidden { display: none; }
+       .notifMenuItem {
+              background: #666;
+              padding: 8px 4px;
+              position: relative;
+              z-index: 21;
+       }
+       &.closed .notifMenuItem {
+              background: transparent;
+       }      
+
+       .indicator {
+              background: #ccc;
+              border: 1px solid #fff;
+              border-radius: 50%;
+              display: block;
+              height: 10px;
+              width: 10px;         
+       }
+       &.connected {
+              .notifMenuItem {
+                     cursor: pointer;
+              }
+              .indicator {
+                     background: #0c0;
+              }
+       }
+       .count {
+              background: #c00;
+              border-radius: 6px;
+              box-shadow: 0 0 2px rgba(0, 0, 0, .25);
+              color: #fff;
+              font-size: 10px;
+              font-weight: bold;
+              height: 12px;
+              left: 2px;
+              line-height: 12px;
+              min-width: 6px;
+              padding: 0 3px;
+              position: absolute;
+              text-align: center;
+              top: 2px;            
+       }
+}
+#noNotifications {
+       padding: 8px;
+       text-align: center;
+}
+#notifPanel {
+       background: #fff;
+       box-sizing: border-box;
+       font-size: 10px;
+       line-height: 12px;
+       overflow-y: auto;
+       position: absolute;
+       top: 100%;
+       width: 186px;
+       z-index: 19;
+       a { color: #0272ff; }
+       ul { 
+              list-style: none;
+              margin: 0;
+              padding: 8px 0;
+       }
+       li {
+              border-top: 1px solid #ccc;
+              padding: 4px 4px 16px;
+              &:first-child { border-top: 0; }
+       }
+       .date {
+              color: #999;
+       }
+       .new {
+              .date { color: #0272ff; }
+       }
+
+       .loadMore {
+              display: block;
+              font-size: 12px;
+              margin: 8px auto;
+              text-align: center;
+              &.hidden { display: none; }
+       }
+}
+

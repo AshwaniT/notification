@@ -1,0 +1,7 @@
+﻿<h6><a ui-sref="notificationCount">Back</a></h6>
+<div>
+    <div ng-repeat="ns in notifications">
+        <h3>{{ns.NotificationType.Name}} || {{ns.UserActivityType.Name}}</h3>
+        <h5>By: {{ns.Sender.Name}}</h5>
+    </div>
+</div>

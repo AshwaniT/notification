@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="withSignalR">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/scripts/jquery-1.6.4.min.js"></script>
+    <script src="~/scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="~/script/angular.min.js"></script>
+    <script src="~/scripts/angular-signalr-hub.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular-cookies.min.js'></script>
+    <script src="~/script/angular-ui-router.min.js"></script>
+
+
+    <script src="~/script/notification/withSignalR.js"></script>
+    <script src="~/script/notification/service.js"></script>
+    <link href="~/style/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <a href="~/home/SaveNotification">Add Notification</a> || <a href="/">With Long Polling</a>
+    </div>
+    <div style="100%">
+        <div style="width:50%; float:left;">
+            <div ui-view></div>
+        </div>
+        <div style="width:50%; float:left;" ng-controller="UserController">
+            <h6>
+                View Notification for : <select ng-model="userModel.Id"
+                                                ng-options="user.Id as user.Name for user in users"
+                                                ng-change="UserChange()"></select>
+            </h6>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<h1>Admin</h1>
+
+    <table>
+    <tr>
+        <td>Sender: </td>
+        <td>
+            <select ng-model="SenderId" ng-options="user.Id as user.Name for user in Users"></select>
+        </td>
+
+    </tr>
+    <tr>
+        <td>Reciever: </td>
+        <td><select ng-model="RecieverId" ng-options="user.Id as user.Name for user in Users"></select></td>
+    </tr>
+    <tr>
+        <td>Type: </td>
+        <td><select ng-model="NotificationType" ng-options="type.Id as type.Name for type in NotificationTypes"></select></td>
+    </tr>
+    <tr>
+        <td>Activity: </td>
+        <td><select ng-model="UserActivityType" ng-options="type.Id as type.Name for type in ActivityTypes"></select></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="button" ng-click="saveNotification()" value="Submit" />
+        </td>
+    </tr>
+</table>
+

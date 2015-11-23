@@ -1,0 +1,18 @@
+﻿<div id="userNotifications" class="toggleDropDown" ng-click="updateLog()">
+    <div class="notifMenuItem">
+        <div class="indicator"></div>
+        <div class="count hidden" id="notificationsCount">{{notificationCount}}</div> Welcome &nbsp;{{UserName}}
+    </div>
+    <div id="notifPanel" class="dropDown" ng-show="hasClicked">
+        <div id="noNotifications" ng-show="hasNoValue">You have no notifications.</div>
+        <ul id="notifications" ng-show="hasValue" ng-repeat="notification in notifications">
+            <li>
+                <h3>{{notification.NotificationType.Name}} || {{notification.UserActivityType.Name}}</h3>
+                <h5>By: {{notification.Sender.Name}}</h5>
+                <div class="date">
+                    {{notification.FormatedDate}}
+                </div>
+            </li>
+        </ul>       
+    </div>
+</div>
